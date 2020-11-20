@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+
+html, body { height:100%; }
+body { margin:0; padding:0; font-family:'Noto Sans KR','Apple SD Gothic Neo',sans-serif; font-weight:400;}
+ul, li { list-style:none; margin:0; padding:0; }
+a { display:block; text-decoration:none; }
+
+/***** header *****/
+header {width: 90vw; display: flex; justify-content: space-between; flex-direction: row;margin: 0 auto; position: fixed; right: 0; left: 0;}
+header a {font-size: 2em;}
+.logo {width: 1 0px; background-color: blue;}
+.logo a {width: 100%; height: 100%; background-color: blue;}
+.login {width: 100px; background-color: blue;}
+/***** main *****/
+.main {display: flex; justify-content: space-between;flex-direction: column;}
+    /* main_txt */
+    .main_txt h2 {color: #fff;}
+    /* trial */
+        
+    /* main box */
+    /* 영상 다섯개 마우스 오버시에 영상 재생,사운드 */
+    .main_box {width: 100vw; height: 20vh; display: flex; justify-content: space-between; flex-direction: row; background-color: brown;}
+    .videos{background-color: burlywood;}
+
+/***** info *****/
+.info {width: 400vw; height: 100%; background-color: chartreuse; }
+.container {}
+.horizontal {}
+.info_box {}
+    /* info number box */
+    .info_txt {}
+    /* 이미지 */
+    .info_img {}
+
+        /* last info_txt - QnA */
+        #faq {}
+        #fag h3 {}
+            /* faq-list */
+            /* ul */
+            .faq-list {width: 80%; height: 80%; display: flex;justify-content: space-between;flex-direction: column; background-color: cadetblue;}
+                /* li */
+/***** footer *****/
+footer {}
+footer p {}
+/* footer-links */
+/* ul */
+.footer-links {}
+/* li */
+.item {}
+.item a {}
+
+    /* language */
+    .language_label {}
+    .ui-lable {}
+        /* select */
+        .undefined-select {}
+            /* ko */
+            option:first {}
+            /* en */
+            option:last-child {}
+
+/* footer txt */
+.footer-txt {width: 100vw; height: 50%; background-color: cadetblue;}
