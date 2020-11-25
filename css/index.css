@@ -1,8 +1,9 @@
 @charset "utf-8";
-
-
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
 html, body { height:100%; background-color: #000; }
-body { margin:0; padding:0; font-family:'Noto Sans KR','Apple SD Gothic Neo',sans-serif; font-weight:400; color: #fff;}
+body { margin:0; padding:0; 
+    font-family:'Bebas Neue','Noto Sans KR','Apple SD Gothic Neo',sans-serif; 
+     font-weight:400; color: #fff;}
 ul, li { list-style:none; margin:0; padding:0; }
 a { display:block; text-decoration:none; color: #fff;}
 video {display: inline-block; vertical-align: baseline;}
@@ -18,7 +19,7 @@ header {width: 100vw; height: 40px; display: flex; justify-content: space-betwee
 .main {display: flex; justify-content: space-between;flex-direction: column;}
     /* main_txt */
     .main_txt {width: 100vw; height: 100vh;  display: flex; justify-content: center;}
-    .main_txt h2 {color: #fff; font-size: 3em; display: flex; margin: 0 auto; align-items: center;}
+    .main_txt h2 {color: #fff; font-size: 3.5em; display: flex; margin: 0 auto; align-items: center; line-height: 1.3em; width: 85%; letter-spacing: 5px;}
     /* trial */
     .trial {width: 100vw; display: flex; justify-content: center; flex-direction: column;}
     .trial p { text-align: center; color: #fff; font-size: 0.8em; margin: 0; margin-bottom: 5%;}
@@ -56,7 +57,7 @@ header {width: 100vw; height: 40px; display: flex; justify-content: space-betwee
 .horizontal {}
 .info_box {}
     /* info number box */
-    .info_txt {width: 100vw; height: 80vh; background-color: darkgoldenrod;}
+    .info_txt {width: 100vw; height: 80vh; background-color: darkgoldenrod; text-align: center;}
         /* 이미지 */
         .info_img {background-color: #000; width: 90%; margin: 0 auto; height: 50%;}
         .story {position: relative; overflow: hidden; display: flex; height: 100%; align-items: center;}
@@ -70,13 +71,13 @@ header {width: 100vw; height: 40px; display: flex; justify-content: space-betwee
         .info_txt .txt p {margin: 0; display: flex; justify-content: center;}
         /* last info_txt - QnA */
         #faq {}
-        #faq h3 {}
+        #faq h3 {margin: 0 auto; text-align: center;}
             /* faq-list */
             /* ul */
             .faq-list {width: 80%; display: flex;justify-content: space-between;flex-direction: column; background-color: cadetblue; margin: 0 auto;}
                 /* li */
                 .faq-list-item {width: 100%;
-                    height: 50px; transition: 0.5s;}
+text-align: center;height: 40px; transition: 0.5s;}
                 .faq-list-item:nth-child(1) {background-color:  #d789d7;}
                 .faq-list-item:nth-child(2) {background-color:  #b362b3;}
                 .faq-list-item:nth-child(3) {background-color:  #973397;}
@@ -84,7 +85,7 @@ header {width: 100vw; height: 40px; display: flex; justify-content: space-betwee
                 .faq-list-item:nth-child(5) {background-color:  #851b85;}
                 .faq-list-item:nth-child(6) {background-color:  #5f125f;}
                 /* faq-question */
-                .faq-question {width: 100%; height: 50px;
+                .faq-question {width: 100%; height: 40px; background-color: #000; color: #fff; border: none;
                     /* border: none; */
                 }
                 .faq-question h5 {margin: 0;}
@@ -108,23 +109,29 @@ header {width: 100vw; height: 40px; display: flex; justify-content: space-betwee
                 .faq-question #btn.active::before {}
 /***** footer *****/
 footer { width: 100vw; height: 50vh;}
-footer p {}
+footer p { font-size: 1.5em; margin: 5% auto; text-align: center;}
 /* footer-links */
+.footer-links {display: flex; flex-direction: row;}
 /* ul */
-.footer-links {}
+.link-box {width: 50%;}
 /* li */
+.link-box ul {margin: 0 13%; display: flex; justify-content: space-between; flex-direction: column; height: 200px;}
+.links2 {}
 .item {}
 .item a {}
 
     /* language */
-    .language_label {}
-    .ui-lable {}
+    /* .language_label {width: 100px; height: 40px;}
+    .language {width: 100%; height: 100%;}
+    .ui-lable { width: 100%; height: 100%;} */
         /* select */
-        .undefined-select {}
+        .undefined-select {width: 100px; height: 40px; background-color: #000; color: #fff; border-radius: 5px;}
+            .option {width: auto; height: auto; font-size: 0.5em;}
             /* ko */
-            option:first {}
+            option:first { width: 100px; height: 40px;}
             /* en */
             option:last-child {}
 
 /* footer txt */
-.footer-txt {width: 100vw; height: 50%; background-color: cadetblue;}
+.footer-txt {width: 100vw;}
+.footer-txt p {font-size: 0.8em;}
