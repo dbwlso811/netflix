@@ -1,5 +1,6 @@
 $(function(){
 // 자주 묻는 질문 button 클릭시 박스 아래로 오픈
+// 지주 묻는 질문 button 클릭시 오른쪽 icon변경
    $('.faq-list .faq-answer').hide();
 
    $('.faq-list .faq-question').on('click',function(e){
@@ -17,27 +18,31 @@ $(function(){
        $(this).next().slideUp();
      }
    });
-  //  button 클릭시 icon 변화
-   $('.faq-question').on('click', function(){
-    $('.btn-x').toggleClass('active');
-    });
-
-      // $('.btn-x').each(function () {
-      //     $('.faq-question').click(function () {
-      //         $(this).addClass('active');
-      //         $(this).siblings('active').removeClass('active');
-      //     });
-      // });
-    
-
-
-
-  // $('.faq-list .faq-question').on('click',function(){
-  //   if($(this).hasClass('active')){//active를 가지고 있으면
-  //     $(this).removeClass('active');//모든 active 제거
-  //   } else {
-  //     $(this).siblings('.active').removeClass('active');
-  //     $(this).addClass('active');
-  //   }
-  // });
+  
  });
+
+//  마우스 오버시 영상재생
+//  $(document).ready(function(){
+//   $(function () {
+//     var movies = $('.movie');
+  
+//     movies.on('mouseover', function () {
+//       var title_id = $(this).attr('id');
+//       var singer = $(this).attr('data-singer');
+//       // $('.title').text(title_id);
+//       // $('.singer').text(singer);
+//       $('body').addClass('bg');
+  
+//       this.play();
+  
+//     });
+  
+//     movies.on('mouseout', function () {
+//       $('body').removeClass('bg');
+//       this.pause();
+//       this.currentTime = 0;
+  
+//     });
+  
+//   })
+// })

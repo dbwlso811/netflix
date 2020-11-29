@@ -1,12 +1,29 @@
 @charset "utf-8";
 /* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
 html, body { height:100%; background-color: #000; }
+/* html *,html *:before,html *:after {
+    box-sizing: border-box;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+html i, html em,
+html b, html strong,
+html span {
+  -webkit-transition: none;
+  transition: none;
+} */
+
 body { margin:0; padding:0; 
     font-family:'Bebas Neue','Noto Sans KR','Apple SD Gothic Neo',sans-serif;  letter-spacing: 0.1em;
      font-weight:400; color: #fff;}
 ul, li { list-style:none; margin:0; padding:0; }
 a { display:block; text-decoration:none; color: #fff;}
+/* *:before,
+*:after {
+  z-index: -1;
+} */
 video {display: inline-block; vertical-align: baseline;}
+
 
 /***** header *****/
 header {width: 100vw; height: 40px; display: flex; justify-content: space-between; flex-direction: row;margin: 0 auto; position: fixed; right: 0; left: 0; margin-top: 5px; z-index: 9;}
@@ -24,8 +41,31 @@ header {width: 100vw; height: 40px; display: flex; justify-content: space-betwee
     .trial {width: 100vw; display: flex; justify-content: center; flex-direction: column;}
     .trial p { text-align: center; color: #fff; font-size: 1em; margin: 0; margin-bottom: 5%;}
     #free {margin: 0 auto; width: 60%; height: 30px; margin-bottom: 5%; border: none;}
-    .trial_btn {background-color: #fff; font-size: 1.5em; font-weight: bold; text-transform: uppercase; width: 60%; height: 40px; display: flex; justify-content: center; align-items: center; border-radius: 10px; margin: 0 auto; margin-bottom: 20%;}
-    .trial_btn span {color: #E50914;}
+    /* botton */
+    .trial_btn {background-color: #fff; font-size: 1.5em; font-weight: bold; text-transform: uppercase; width: 60%; height: 40px; display: flex; justify-content: center; align-items: center; border-radius: 10px; margin: 0 auto; margin-bottom: 20%;
+        overflow: hidden; position: relative;
+        -webkit-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+    }
+    
+    .trial_btn span {color: #E50914;z-index: 5;transition: color 400ms;}
+
+    .trial_btn::before {
+        content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:#E50914;
+    -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+          transition: transform 500ms;
+          
+}
+    .trial_btn:hover span {color: #fff;}
+    .trial_btn:hover:before {-webkit-transform: translateX(0);
+        transform: translateX(0);}
     /* main box */
 
     /* 스크롤 이벤트 */
@@ -49,7 +89,21 @@ header {width: 100vw; height: 40px; display: flex; justify-content: space-betwee
 
     /* 영상 다섯개 마우스 오버시에 영상 재생,사운드 */
     /* .main_box {width: 100vw; height: 20vh; display: flex; justify-content: space-between; flex-direction: row; background-color: brown;} */
-    .videos{background-color: burlywood;}
+    .videos{ background-size: cover; background-position: center; background-repeat: no-repeat;}
+    .videos:hover {background-image: none;}
+    .video1 {background-image: url(../images/video-img1.jpg);}
+    .video2 {background-image: url(../images/video-img2.jpg);}
+    .video3 {background-image: url(../images/video-img2.jpg);}
+    .video4 {background-image: url(../images/video-img2.jpg);}
+    .video5 {background-image: url(../images/video-img2.jpg);}
+    .video6 {background-image: url(../images/video-img2.jpg);}
+    .video7 {background-image: url(../images/video-img2.jpg);}
+    .video8 {background-image: url(../images/video-img2.jpg);}
+    .video9 {background-image: url(../images/video-img2.jpg);}
+    .video10 {background-image: url(../images/video-img2.jpg);}
+
+    .videos > .movie {display: block; opacity: 0; width: auto; height: auto;}
+    .videos > .movie:hover { opacity: 1;}
 
 /***** info *****/
 .info {width: 100vw; }
@@ -102,9 +156,10 @@ transition: 0.5s; border: 1px solid rgba(255, 255, 255, .25); }
                 .faq-question h5 {margin: 0;}
 
                 .faq-question.on {border: none; background-color: rgba(255, 255, 255, .25);}
+                .faq-question.on .btn-x {transform: none;}
                 /* btn-x */
-                .btn-x {width: 15px; height: 15px;fill: #fff; transform: rotate(-45deg);}
-                .btn-x.active {transform: none;}
+                .btn-x {width: 15px; height: 15px;fill: #fff; transform: rotate(-45deg); transition: transform 500ms;}
+                /* .btn-x.active {transform: none;} */
                 /* .faq-answer */
                 .faq-answer {background-color:  rgba(255, 255, 255, .25);
                      padding: 15px;
