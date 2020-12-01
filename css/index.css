@@ -27,7 +27,7 @@ video {display: inline-block; vertical-align: baseline;}
 
 /***** header *****/
 header {width: 100vw; height: 40px; display: flex; justify-content: space-between; flex-direction: row;margin: 0 auto; position: fixed; right: 0; left: 0; margin-top: 5px; z-index: 9;}
-.logo {width: 100px; background-color: rgb(68, 68, 71); margin-left: 2.5vw;}
+.logo {width: 100px; margin-left: 2.5vw; background-image: url(../images/logo.png); background-repeat: no-repeat; background-size: contain; background-position: center;}
 .logo a {width: 100%; height: 100%;}
 .login {width: 80px; background-color: #E50914; margin-right: 2.5vw; border-radius: 10px;}
 .login a {color: #fff; text-transform: uppercase; font-size: 1.2em; width: 100%; height: 100%;display: flex;justify-content: center; align-items: center;}
@@ -140,7 +140,7 @@ header {width: 100vw; height: 40px; display: flex; justify-content: space-betwee
         #faq h3 {margin: 0 auto; text-align: center; margin-top: 20%; margin-bottom: 10%;}
             /* faq-list */
             /* ul */
-            .faq-list {width: 80%; display: flex;justify-content: space-between;flex-direction: column; margin: 0 auto;}
+            .faq-list {width: 80%; display: flex;justify-content: space-between;flex-direction: column; margin: 10% auto;}
                 /* li */
                 .faq-list-item {width: 100%;
 text-align: start;
@@ -171,7 +171,7 @@ transition: 0.5s; border: 1px solid rgba(255, 255, 255, .25); }
 footer { width: 100vw; height: 50vh;}
 footer p { font-size: 1.5em; margin: 5% auto; text-align: center;}
 /* footer-links */
-.footer-links {display: flex; flex-direction: row;}
+.footer-links {display: flex; flex-direction: row; font-size: 0.8em;}
 /* ul */
 .link-box {width: 50%;}
 /* li */
@@ -181,6 +181,7 @@ footer p { font-size: 1.5em; margin: 5% auto; text-align: center;}
 .item a {}
 
     /* language */
+    .language_label {margin: 20% 0; margin-left: 6.5%;}
     /* .language_label {width: 100px; height: 40px;}
     .language {width: 100%; height: 100%;}
     .ui-lable { width: 100%; height: 100%;} */
@@ -193,5 +194,14 @@ footer p { font-size: 1.5em; margin: 5% auto; text-align: center;}
             option:last-child {}
 
 /* footer txt */
+footer > p {margin: 15% auto;}
 .footer-txt {width: 100vw;}
 .footer-txt p {font-size: 0.8em;}
+/***** Tablet *****/
+@media (min-width:767px) {
+
+}
+/***** PC *****/
+@media (min-width:1280px) {
+
+}
