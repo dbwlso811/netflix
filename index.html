@@ -11,14 +11,14 @@
 		<meta property="og:title" content="netflix">
         <meta property="og:description" content="스마트 TV, 태블릿, 스마트폰, PC, 게임 콘솔 등 다양한 디바이스에서 영화와 TV 프로그램을 마음껏 즐기세요.">
         <!-- img -->
-		<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FPMs0u%2FbtqNHpEjcJG%2FKokBSmRJNl5fJ6CqTava6k%2Fimg.png">
+		<meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FLZIer%2FbtqOYvrA8Cf%2FDBHsQXgdt3lPjucBB9mMtK%2Fimg.png">
         <meta property="og:url" content="https://dbwlso811.github.io/portfolio/index.html">
         
 		<!-- 트위터 전용 -->
 		<meta name="twitter:card" content="netflix">
 		<meta name="twitter:title" content="netflix">
 		<meta name="twitter:description" content="스마트 TV, 태블릿, 스마트폰, PC, 게임 콘솔 등 다양한 디바이스에서 영화와 TV 프로그램을 마음껏 즐기세요.">
-		<meta name="twitter:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FPMs0u%2FbtqNHpEjcJG%2FKokBSmRJNl5fJ6CqTava6k%2Fimg.png">
+		<meta name="twitter:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FLZIer%2FbtqOYvrA8Cf%2FDBHsQXgdt3lPjucBB9mMtK%2Fimg.png">
 		<meta name="twitter:url" content="https://dbwlso811.github.io/portfolio/index.html">
         <title>netflix</title>
 
@@ -40,20 +40,30 @@
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
         <link rel="stylesheet" href="common/normalize.css">
+        <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
         <link rel="stylesheet" href="common/swiper-bundle.min.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/vegas.min.css">
+        <!-- <link rel="stylesheet" href="css/vegas.min.css"> -->
+        <!-- <link rel="stylesheet" href="css/"> -->
         <link rel="stylesheet" href="css/index.css">
 
         <!-- JS/jQuery 연결 -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
-        <script src="js/fullaudio.js"></script>
-        <script src="js/jquery.vide.min.js"></script>
-        <script src="js/jquery-ui.min.js"></script>
-        <script src="js/vegas.min.js"></script>
-        <script src="js/fullpage.min.js"></script>
+        <!-- <script src="prefixfree.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <!-- 이거때매 모바일 스크롤 안댐 -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script> -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script> -->
+        <!-- <script src="js/fullaudio.js"></script> -->
+        <!-- <script src="js/jquery.vide.min.js"></script> -->
+        <!-- <script src="js/jquery-ui.min.js"></script> -->
+        <!-- <script src="js/vegas.min.js"></script> -->
+        <!-- <script src="js/fullpage.min.js"></script> -->
+        <!-- video -->
+        <!-- <script src="video.js"></script> -->
         <script src="js/index.js"></script>
     </head>
 
@@ -72,10 +82,12 @@
         <div class="main">
             <!-- main_txt -->
             <div class="main_txt">
-                <h2>
-                    Unlimited number of<br>
-                    movies and TV programs.
-                </h2>
+                <!-- <h2 class="program_txt1" data-text="Unlimited number of movies and TV programs.">Unlimited number of<br>movies and TV programs.
+                </h2> -->
+                <h2 class="program_txt program_txt1" data-text="Unlimited">Unlimited</h2>
+                <h2 class="program_txt program_txt2" data-text="number of">number of</h2>
+                <h2 class="program_txt program_txt3" data-text="movies and">movies and</h2>
+                <h2 class="program_txt program_txt4" data-text="TV programs.">TV programs.</h2>
             </div>
             <div class="trial">
                 <p>시청할 준비가 되셨나요? <br>
@@ -84,44 +96,71 @@
                 <input type="text" id="free" name="e-mail">
                 <div class="trial_btn"><span>30-day <strong>free </strong>trial</span></div>
             </div>
-            <div class="videos_box">
-                <ul class="main_box">
-                    <li class="videos video1">
-                        <iframe class="movie" width="560" height="315" src="https://www.youtube.com/embed/ifyPEnKreJI" frameborder="0" allow="accelerometer; muted; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <!-- <video loop class="movie" id="movie1" data-singer="movie1" src="https://www.youtube.com/embed/ogyvLFoY5yA"> -->
-                            
-                        </video>
+            
+            <div class="video-thumbs-frame">
+                <ul class="video-thumbs position-1" current-thumb="1" start-x="" dragging="false">
+                    <li class="video-thumb thumb-1 active" index="1" youtube="https://www.youtube.com/embed/9KkKyHUw4f4?autoplay=1&amp;showinfo=0">
+                        <div class="video-thumb-wrapper">
+                            <div class="video-thumb-overlay"><img class="video-play-icon" src="http://katehummer.com/drewmachak/img/icons/play-alt.svg"></div>
+                            <div class="video-info-container">
+                                <article class="video-thumb-title">살아있다</article>
+                                <article class="video-thumb-subtitle">2020.06.24.</article>
+                                <div class="video-stats">
+                                    <article class="stats-item item-views">1,900,000 views</article>
+                                    <div class="stats-item item-likes"><img class="stats-icon thumbs-icon" src="http://katehummer.com/drewmachak/img/icons/thumbs-up-alt.svg"><span class="likes-count">58</span></div>
+                                    <a class="stats-item video-url" target="_blank" href="https://www.youtube.com/watch?v=ifyPEnKreJI"><img class="stats-icon video-link" src="http://katehummer.com/drewmachak/img/icons/link-alt.svg"></a>
+                                </div>
+                            </div>
+                            <div class="video-thumbnail video_1"><img class="video-thumb-img thumbnail-filter" alt="img1"></div>
+                        </div>
                     </li>
-                    <li class="videos video2">
-
+                    <li class="video-thumb" youtube="https://www.youtube.com/embed/7GzRZnpTsbE?autoplay=1&amp;showinfo=0" index="2">
+                        <div class="video-thumb-wrapper">
+                            <div class="video-thumb-overlay"><img class="video-play-icon" src="http://katehummer.com/drewmachak/img/icons/play-alt.svg"></div>
+                            <div class="video-info-container">
+                                <article class="video-thumb-title">The Tax Collector</article>
+                                <article class="video-thumb-subtitle">2020.11.18.</article>
+                                <div class="video-stats">
+                                    <article class="stats-item item-views">16,000  views</article>
+                                    <div class="stats-item item-likes"><img class="stats-icon thumbs-icon" src="http://katehummer.com/drewmachak/img/icons/thumbs-up-alt.svg"><span class="likes-count"> 3</span></div>
+                                    <a class="stats-item video-url" target="_blank" href="https://www.youtube.com/watch?v=6wf_L9-klsE"><img class="stats-icon video-link" src="http://katehummer.com/drewmachak/img/icons/link-alt.svg"></a>
+                                </div>
+                            </div>
+                            <div class="video-thumbnail video_2"><img class="video-thumb-img thumbnail-filter" alt="img2"></div>
+                        </div>
                     </li>
-                    <li class="videos video3">
-
+                    <li class="video-thumb" youtube="https://www.youtube.com/embed/hh4PgqsTYlM?autoplay=1&amp;showinfo=0" index="3">
+                        <div class="video-thumb-wrapper">
+                            <div class="video-thumb-overlay"><img class="video-play-icon" src="http://katehummer.com/drewmachak/img/icons/play-alt.svg"></div>
+                            <div class="video-info-container">
+                                <article class="video-thumb-title">도굴</article>
+                                <article class="video-thumb-subtitle">2020.11.04.</article>
+                                <div class="video-stats">
+                                    <article class="stats-item item-views">1,390,000 views</article>
+                                    <div class="stats-item item-likes"><img class="stats-icon thumbs-icon" src="http://katehummer.com/drewmachak/img/icons/thumbs-up-alt.svg"><span class="likes-count"> 2</span></div>
+                                    <a class="stats-item video-url" target="_blank" href="https://www.youtube.com/watch?v=dkt_94cH9WI"><img class="stats-icon video-link" src="http://katehummer.com/drewmachak/img/icons/link-alt.svg"></a>
+                                </div>
+                            </div>
+                            <div class="video-thumbnail video_3"><img class="video-thumb-img thumbnail-filter" alt="img3"></div>
+                        </div>
                     </li>
-                    <li class="videos video4">
-
-                    </li>
-                    <li class="videos video5">
-
-                    </li>
-                    <li class="videos video6">
-
-                    </li>
-                    <li class="videos video7">
-
-                    </li>
-                    <li class="videos video8">
-
-                    </li>
-                    <li class="videos video9">
-
-                    </li>
-                    <li class="videos video10">
-
+                    <li class="video-thumb" youtube="https://www.youtube.com/embed/ognAQ6xI5hw?autoplay=1&amp;showinfo=0" index="4">
+                        <div class="video-thumb-wrapper">
+                            <div class="video-thumb-overlay"><img class="video-play-icon" src="http://katehummer.com/drewmachak/img/icons/play-alt.svg"></div>
+                            <div class="video-info-container">
+                                <article class="video-thumb-title">A Nice Girl Like You</article>
+                                <article class="video-thumb-subtitle">2020.11.18.</article>
+                                <div class="video-stats">
+                                    <article class="stats-item item-views">4,796 views</article>
+                                    <div class="stats-item item-likes"><img class="stats-icon thumbs-icon" src="http://katehummer.com/drewmachak/img/icons/thumbs-up-alt.svg"><span class="likes-count"> 2</span></div>
+                                    <a class="stats-item video-url" target="_blank" href="https://www.youtube.com/watch?v=-Wjjo30JJck"><img class="stats-icon video-link" src="http://katehummer.com/drewmachak/img/icons/link-alt.svg"></a>
+                                </div>
+                            </div>
+                            <div class="video-thumbnail video_4"><img class="video-thumb-img thumbnail-filter" alt="img4"></div>
+                        </div>
                     </li>
                 </ul>
             </div>
-            
         </div>
         <!-- info -->
         <section class="info">
@@ -306,8 +345,10 @@
             <!-- language -->
             <div class="language_label">
                     <select class="undefined-select">
-                        <option value="/kr/" data-language="ko" data-country="KR">한국어</option>
-                        <option value="/kr-en/" data-language="en" data-country="KR">English</option>
+                        <!-- <option value="/kr/" data-language="ko"data-country="KR">한국어</option>
+                        <option value="/kr-en/" data-language="en" data-country="KR">English</option> -->
+                        <option>한국어</option>
+                        <option>English</option>
                     </select>
             </div>
             <!-- footer txt -->
