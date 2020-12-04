@@ -41,7 +41,9 @@ header {width: 100vw; height: 40px; display: flex; justify-content: space-betwee
     /* main_txt */
     .main_txt {width: 100vw; height: 100vh;  display: flex; justify-content: center; flex-direction: column;}
     .program_txt {color: #fff; font-size: 3.5em; margin: 0 auto; align-items: center; line-height: 1.3em; width: 85%; letter-spacing: 5px; position: relative; display: flex;}
-
+    .p_program_txt {
+      display: none;
+    }
     /* main txt (noise-anim) */
     @keyframes noise-anim {
         0% {
@@ -109,6 +111,20 @@ header {width: 100vw; height: 40px; display: flex; justify-content: space-betwee
         }
       }
       .program_txt:after {
+        content: attr(data-text);
+        position: absolute;
+        left: 2px;
+        text-shadow: -1px 0 red;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        color: white;
+        background: black;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim 2s infinite linear alternate-reverse;
+      }
+      .p_program_txt:after {
         content: attr(data-text);
         position: absolute;
         left: 2px;
@@ -200,6 +216,18 @@ header {width: 100vw; height: 40px; display: flex; justify-content: space-betwee
         clip: rect(0, 900px, 0, 0);
         animation: noise-anim-2 3s infinite linear alternate-reverse;
       }
+      .p_program_txt:before {
+        content: attr(data-text);
+        position: absolute;
+        left: -2px;
+        text-shadow: 1px 0 blue;
+        top: 0;
+        color: white;
+        background: black;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim-2 3s infinite linear alternate-reverse;
+      }
     /*  */
 
     /* trial */
@@ -218,6 +246,7 @@ header {width: 100vw; height: 40px; display: flex; justify-content: space-betwee
     .trial_btn::before {
         content: '';
     position: absolute;
+    border-radius: 10px 0 0 10px;
     top: 0;
     right: 0;
     bottom: 0;
@@ -518,7 +547,7 @@ header {width: 100vw; height: 40px; display: flex; justify-content: space-betwee
     .info_txt {width: 100vw; text-align: center;margin: 35% auto;}
         /* 이미지 */
         .info_img {background-color: #000; width: 90%; margin: 0 auto; height: 50%;}
-        .story {position: relative; overflow: hidden; display: flex; height: 100%; align-items: center;}
+        .story {position: relative; overflow: hidden;height: 100%; align-items: center;}
         .story img {position: relative; max-width: 100%; height: auto; border: 0; z-index: 1;}
             /* image2 */
             .image2 .story-video {z-index: 2; width: 60%; border: 2px solid rgba(255, 255, 255, .25); box-shadow: 0 0 2em 0 #000; border-radius: .75em; height: 3em; top: 80%; background-color: #000; display: flex; justify-content: space-between; flex-direction: row; align-items: center;padding-left: 0.5em; padding-right: 0.5em;}
@@ -573,7 +602,7 @@ transition: 0.5s; border: 1px solid rgba(255, 255, 255, .25); }
 footer { width: 100vw; height: 50vh;}
 footer p { font-size: 1.5em; margin: 5% auto; text-align: center;}
 /* footer-links */
-.footer-links {display: flex; flex-direction: row; font-size: 0.8em;}
+.footer-links, .p_footer-links {display: flex; flex-direction: row; font-size: 0.8em;}
 /* ul */
 .link-box {width: 50%;}
 /* li */
@@ -585,14 +614,37 @@ footer p { font-size: 1.5em; margin: 5% auto; text-align: center;}
         .language_label span {display: none;}
             option {width: auto; height: auto; font-size: 0.5em;}
 /* footer txt */
+.p_footer-links {display: none;}
 footer > p {margin: 15% auto;}
 .footer-txt {width: 100vw;}
 .footer-txt p {font-size: 0.8em;}
 /***** Tablet *****/
 @media (min-width:767px) {
-
+  .program_txt {display: none;}
+  .p_program_txt {
+    color: #fff; font-size: 4em; margin: 0 auto; align-items: center; line-height: 1.3em; width: 85%; letter-spacing: 5px; position: relative; display: flex;
+  }
+  .image2 .story-video {width: 50%;}
+  #story-video-3 {width: 50%;}
+  /* 자주묻는질문 */
+  #faq h3 {
+    font-size: 1.5em;
+  }
+  .faq-list {width: 70%;}
+  .faq-question {padding-left: 1em; padding-right: 0.8em;}
+  .faq-question h5 {font-size: 1em;}
+  /* footer */
+  footer > p {margin: 5% auto; text-align: start;margin-left: 2.5%;}
+  .footer-links {display: none;}
+  .p_footer-links {display: flex;}
+  .language_label {margin: 5% 0; margin-left: 2.5%; width: 50%;}
+  .footer-txt {width: 95vw; margin: 0 auto;}
+  .link-box ul {height: 100px;}
 }
 /***** PC *****/
 @media (min-width:1280px) {
-
+  /* header */
+  header {margin-top: 15px;}
+  /* main */
+  .p_program_txt {font-size: 5em;}
 }
